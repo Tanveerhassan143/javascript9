@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>login page</h1>
+    <input type="email" name="email" id="email"> <br> <br>
+    <input type="password" name="password" id="password">
+    <button onclick="login()">login</button>
+    
+
+
+
+
+    <script>
+var loginEmail=document.getElementById('email')
+var logpass=document.getElementById('password')
+
+function login(){
+    var email=localStorage.getItem('email')
+    var pass=localStorage.getItem('password')
+    if(loginEmail.value== email && logpass.value==pass){
+        alert("you are login")
+        window.location.href='welcome.html'
+    }else{
+        alert('pleas enter right password')
+    }
+
+}
+    </script>
+</body>
+</html>

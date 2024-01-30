@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="username" placeholder="username">
+    <br><br>
+    
+    <input type="number" name="" id="cellNumber" placeholder="cellNumber"><br><br>
+    
+    <input type="email" name="" id="email" placeholder="Email"><br>
+    <br>
+    <input type="password" name="" id="password" placeholder="password">
+    <button onclick="sign()">sign up</button>
+
+
+
+
+    <script>
+        var username= document.getElementById('username')
+        var cellNumber= document.getElementById('cellNumber')
+        var email=document.getElementById('email')
+        var password=document.getElementById('password')
+
+        function sign(){
+localStorage.setItem('user',username.value);
+localStorage.setItem('cellNumber',cellNumber.value);
+localStorage.setItem('email',email.value);
+localStorage.setItem('password',password.value);
+window.location.href='login.html'
+        }
+    </script>
+
+
+</body>
+</html>
